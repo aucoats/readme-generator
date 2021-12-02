@@ -69,7 +69,12 @@ const questions = [
         name: 'test', 
         message: 'Enter any test instructions.'
     },
-    
+    {
+        type: 'list',
+        name: 'license', 
+        message: 'What license is applicable to this project? (Default none)',
+        choices: ['None', 'Apache', 'MIT']
+    }
 ];
 
 
@@ -78,7 +83,7 @@ function writeToFile(info) {
     
 
     return new Promise((resolve, reject) => { 
-        fs.writeFile(`${info.title}.md`, info, err => {
+        fs.writeFile(`READMEtest.md`, info, err => {
             if (err) {
                 reject(err);
                 return;
