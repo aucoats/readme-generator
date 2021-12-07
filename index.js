@@ -74,6 +74,16 @@ const questions = [
         name: 'license', 
         message: 'What license is applicable to this project? (Default none)',
         choices: ['None', 'Apache', 'MIT']
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github username?'
+    },
+    {
+        type: 'input',
+        name: 'email', 
+        message: 'What is your email address?'
     }
 ];
 
@@ -81,9 +91,8 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(info) {
     
-
     return new Promise((resolve, reject) => { 
-        fs.writeFile(`READMEtest.md`, info, err => {
+        fs.writeFile(`GENERATED.md`, info, err => {
             if (err) {
                 reject(err);
                 return;
@@ -99,11 +108,11 @@ function writeToFile(info) {
 
 // TODO: Create a function to initialize app
 function init(data) {
-    return inquirer.prompt(questions)
+    return inquirer.prompt(data)
 }
 
 // Function call to initialize app
-init()
+init(questions)
     .then(data => {
         return generateMarkdown(data)
     })
