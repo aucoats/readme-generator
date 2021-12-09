@@ -28,7 +28,7 @@ To invoke the application, enter the following in the terminal at the root of th
 This should invoke a series of prompts, as shown below, and will finish with a 'File Created!' message if generation of your README.md was successful. 
 ![Deployed Gif](./assets/images/deployed.gif)
 
-[Click here to see example with audio.](https://drive.google.com/file/d/1qFTUC8lsScX5UmmCfne7wHgjqDNWQp-m/view)
+[Click here to see example with audio.](https://drive.google.com/file/d/12_0oleXVOLr-zUoB7SrIxF3DF8pFUjtz/view)
 
 
 
