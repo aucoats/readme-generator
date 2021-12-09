@@ -41,7 +41,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter usage information (Required)',
+        message: 'Enter usage information. (Required)',
         validate: usageInput => {
             if (usageInput) {
                 return true;
